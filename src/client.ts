@@ -5,6 +5,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 })
 
+// 이렇게 작성하는 방식은 hooks이 나오기 이전의 방식이다. (구림)
 client.query({
     query: gql`
         {
