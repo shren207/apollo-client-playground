@@ -4,6 +4,7 @@ import Movies from './routes/Movies';
 
 
 export default function App() {
+  // console.log("hello world")
   return (
     <BrowserRouter>
       <Routes>
