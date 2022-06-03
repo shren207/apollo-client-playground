@@ -8,17 +8,17 @@ type Member = {
   address: string;
 };
 
+// Members.tsx
 const ALL_MEMBERS = gql`
   query AllMembers {
     findAll {
       id
-      firstName
-      lastName
-      fullName
       address
+      fullName
     }
   }
 `;
+
 // ALL_MEMBERS의 쿼리 작성방식은 playground랑 그냥 똑같은 방식이다.
 
 export default function Members() {
@@ -29,7 +29,7 @@ export default function Members() {
   return (
     <div>
       {data.findAll.map((member: Member) => {
-        return <li key={member.id}>{member.fullName}</li>;
+        return <li key={member.id}>{member.address}</li>;
       })}
     </div>
   );
