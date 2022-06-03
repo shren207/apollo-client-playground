@@ -1,7 +1,6 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Movie from './routes/Movie';
-import Movies from './routes/Movies';
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Member from "./routes/Member";
+import Members from "./routes/Members";
 
 export default function App() {
   // console.log("hello world")
@@ -9,9 +8,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Movies />} />
-        <Route path="/movie/:id" element={<Movie />} />
+        <Route path="/" element={<Members />} />
+        <Route path="/member/:id" element={<Member />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
